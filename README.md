@@ -42,6 +42,7 @@ This “NFT” is all about utility by creating your very own custom Dynamic NFT
 
 ## Installation
 1. Run `npm i`.
+   - If there are any issues, remove your package-lock.json and `node_modules` directory and run: npm i --legacy-peer-deps --install-links --no-audit
    - For _node-gyp_ issues: `npm install --build-from-source`.
 
 ## Setup

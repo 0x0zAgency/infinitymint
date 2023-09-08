@@ -1,6 +1,7 @@
 {
-    "private": true,
-    "name": "infinitymint-schrodinger",
+    "name": "infinitymint",
+    "version": "0.69.0.bt",
+    "private": false,
     "infinityMint": {
         "allowImport": true
     },

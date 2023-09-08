@@ -28,7 +28,6 @@ typechain
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-package-lock.json
 
 #Hardhat files
 cache/
