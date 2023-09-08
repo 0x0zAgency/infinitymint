@@ -11,7 +11,7 @@ temp_uri
 /references/
 /temp/
 /contracts/custom/*
-/contracts/_mods/
+/contracts/__mods/
 .force_network
 /node_modules/
 /test/

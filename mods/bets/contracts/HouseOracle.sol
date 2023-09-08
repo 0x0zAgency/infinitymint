@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import 'infinitymint/alpha/InfinityMint.sol';
-import 'infinitymint/alpha/InfinityMintStorage.sol';
-import 'infinitymint/alpha/Authentication.sol';
-import 'infinitymint/alpha/InfinityMintObject.sol';
+import 'contracts/InfinityMint.sol';
+import 'contracts/InfinityMintStorage.sol';
+import 'contracts/Authentication.sol';
+import 'contracts/InfinityMintObject.sol';
 import './Bet.sol';
 
 contract Mod_HouseOracle is Authentication, InfinityMintObject {

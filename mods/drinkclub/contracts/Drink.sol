@@ -3,9 +3,9 @@
 //0x0z 2023
 pragma solidity ^0.8.0;
 
-import 'infinitymint/alpha/InfinityMint.sol';
-import 'infinitymint/alpha/InfinityMintApi.sol';
-import 'infinitymint/alpha/InfinityMintStorage.sol';
+import 'contracts/InfinityMint.sol';
+import 'contracts/InfinityMintApi.sol';
+import 'contracts/InfinityMintStorage.sol';
 
 /**
   @notice allows an NFT to redeem an ERC721 which gives them access to a free drink at the marvel, the token owners
