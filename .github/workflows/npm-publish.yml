@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: "18.5.0"
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps --install-links --no-audit
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
