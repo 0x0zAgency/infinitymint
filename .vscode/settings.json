@@ -1,5 +1,8 @@
 {
     "solidity.defaultCompiler": "localNodeModule",
     "solidity.compileUsingRemoteVersion": "latest",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/npm-publish.yml"
+    ]
 }
