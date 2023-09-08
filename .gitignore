@@ -11,11 +11,13 @@ temp_uri
 /references/
 /temp/
 /contracts/custom/*
+/contracts/_mods/
 .force_network
 /node_modules/
 /test/
 package_lock.json
 /actions-runner
+
 
 #Yarn
 yarn-error.log
