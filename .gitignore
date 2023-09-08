@@ -14,6 +14,7 @@ temp_uri
 .force_network
 /node_modules/
 /test/
+package_lock.json
 
 #Yarn
 yarn-error.log

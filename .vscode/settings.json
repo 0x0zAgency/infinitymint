@@ -4,5 +4,6 @@
     "git.ignoreLimitWarning": true,
     "github-actions.workflows.pinned.workflows": [
         ".github/workflows/npm-publish.yml"
-    ]
+    ],
+    "search.useIgnoreFiles": false
 }
