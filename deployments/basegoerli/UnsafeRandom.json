@@ -1,0 +1,219 @@
+{
+  "address": "0x05757Fb2a6f48777765213b05Fb3E1293340E53B",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "seedNumber",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "valuesContract",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maxNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMaxNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "hasDeployed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "randomnessFactor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maxNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_salt",
+          "type": "uint256"
+        }
+      ],
+      "name": "returnNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "salt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x4bdb7198a9c2952ad6917f51f8a09e51fa7834b0eb711546c3e491ae32756d7d",
+  "receipt": {
+    "to": null,
+    "from": "0xDFF917ab602e8508b6907dE1b038dd52B24A2379",
+    "contractAddress": "0x05757Fb2a6f48777765213b05Fb3E1293340E53B",
+    "transactionIndex": 1,
+    "gasUsed": "325041",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x48469c50e91731b579dbfa79fca886da90eb67b420878ec48109953b8df82e2b",
+    "transactionHash": "0x4bdb7198a9c2952ad6917f51f8a09e51fa7834b0eb711546c3e491ae32756d7d",
+    "logs": [],
+    "blockNumber": 9462479,
+    "cumulativeGasUsed": "371894",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    28980,
+    "0x88B11F935975441aC5b3711e2fbA9db8E5E7c775"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "c554005d846e5256cfd947c8d0a331d2",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"seedNumber\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"valuesContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumber\",\"type\":\"uint256\"}],\"name\":\"getMaxNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"hasDeployed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"randomnessFactor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumber\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_salt\",\"type\":\"uint256\"}],\"name\":\"returnNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"salt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"returnNumber(uint256,uint256)\":{\"notice\":\"cheap return number\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/random/UnsafeRandom.sol\":\"UnsafeRandom\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":20},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (utils/math/SafeMath.sol)\\n\\npragma solidity ^0.8.0;\\n\\n// CAUTION\\n// This version of SafeMath should only be used with Solidity 0.8 or later,\\n// because it relies on the compiler's built in overflow checks.\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations.\\n *\\n * NOTE: `SafeMath` is generally not needed starting with Solidity 0.8, since the compiler\\n * now has built in overflow checking.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            uint256 c = a + b;\\n            if (c < a) return (false, 0);\\n            return (true, c);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b > a) return (false, 0);\\n            return (true, a - b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n            // benefit is lost if 'b' is also tested.\\n            // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n            if (a == 0) return (true, 0);\\n            uint256 c = a * b;\\n            if (c / a != b) return (false, 0);\\n            return (true, c);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the division of two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b == 0) return (false, 0);\\n            return (true, a / b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        unchecked {\\n            if (b == 0) return (false, 0);\\n            return (true, a % b);\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a + b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a * b;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return a % b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {trySub}.\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        unchecked {\\n            require(b <= a, errorMessage);\\n            return a - b;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        unchecked {\\n            require(b > 0, errorMessage);\\n            return a / b;\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting with custom message when dividing by zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryMod}.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        unchecked {\\n            require(b > 0, errorMessage);\\n            return a % b;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x58b21219689909c4f8339af00813760337f7e2e7f169a97fe49e2896dcfb3b9a\",\"license\":\"MIT\"},\"contracts/InfinityMintValues.sol\":{\"content\":\"//SPDX-License-Identifier: UNLICENSED\\n//0xTinman.eth 2021\\npragma solidity ^0.8.0;\\n\\ncontract InfinityMintValues {\\n    mapping(string => uint256) private values;\\n    mapping(string => bool) private booleanValues;\\n    mapping(string => bool) private registeredValues;\\n\\n    address deployer;\\n\\n    constructor() {\\n        deployer = msg.sender;\\n    }\\n\\n    modifier onlyDeployer() {\\n        if (msg.sender != deployer) revert();\\n        _;\\n    }\\n\\n    function setValue(string memory key, uint256 value) public onlyDeployer {\\n        values[key] = value;\\n        registeredValues[key] = true;\\n    }\\n\\n    function setupValues(\\n        string[] memory keys,\\n        uint256[] memory _values,\\n        string[] memory booleanKeys,\\n        bool[] memory _booleanValues\\n    ) public onlyDeployer {\\n        require(keys.length == _values.length);\\n        require(booleanKeys.length == _booleanValues.length);\\n        for (uint256 i = 0; i < keys.length; i++) {\\n            setValue(keys[i], _values[i]);\\n        }\\n\\n        for (uint256 i = 0; i < booleanKeys.length; i++) {\\n            setBooleanValue(booleanKeys[i], _booleanValues[i]);\\n        }\\n    }\\n\\n    function setBooleanValue(string memory key, bool value)\\n        public\\n        onlyDeployer\\n    {\\n        booleanValues[key] = value;\\n        registeredValues[key] = true;\\n    }\\n\\n    function isTrue(string memory key) external view returns (bool) {\\n        return booleanValues[key];\\n    }\\n\\n    function getValue(string memory key) external view returns (uint256) {\\n        if (!registeredValues[key]) revert('Invalid Value');\\n\\n        return values[key];\\n    }\\n\\n    /// @dev Default value it returns is zero\\n    function tryGetValue(string memory key) external view returns (uint256) {\\n        if (!registeredValues[key]) return 0;\\n\\n        return values[key];\\n    }\\n}\\n\",\"keccak256\":\"0xfc6def9724b4ef9aa3ace6bafaa9fc232c65788adb1349c9ce5f1f9681c3b078\",\"license\":\"UNLICENSED\"},\"contracts/RandomNumber.sol\":{\"content\":\"//SPDX-License-Identifier: UNLICENSED\\n//0xTinman.eth 2021\\npragma solidity ^0.8.0;\\n\\nimport './InfinityMintValues.sol';\\n\\n/// @title InfinityMint Random Number Abstract Contract\\n/// @author 0xTinman.eth\\nabstract contract RandomNumber {\\n    uint256 public randomnessFactor;\\n    bool public hasDeployed = false;\\n    uint256 public salt = 1;\\n\\n    InfinityMintValues internal valuesController;\\n\\n    constructor(address valuesContract) {\\n        valuesController = InfinityMintValues(valuesContract);\\n        randomnessFactor = valuesController.getValue('randomessFactor');\\n    }\\n\\n    function getNumber() external returns (uint256) {\\n        unchecked {\\n            ++salt;\\n        }\\n\\n        return returnNumber(valuesController.getValue('maxRandomNumber'), salt);\\n    }\\n\\n    function getMaxNumber(uint256 maxNumber) external returns (uint256) {\\n        unchecked {\\n            ++salt;\\n        }\\n\\n        return returnNumber(maxNumber, salt);\\n    }\\n\\n    /// @notice cheap return number\\n    function returnNumber(uint256 maxNumber, uint256 _salt)\\n        public\\n        view\\n        virtual\\n        returns (uint256)\\n    {\\n        if (maxNumber <= 0) maxNumber = 1;\\n        return (_salt + 3) % maxNumber;\\n    }\\n}\\n\",\"keccak256\":\"0x3902fef7c566f30b6c918fb1c69aeac606f44c065e86b3deba350ec6aea2c253\",\"license\":\"UNLICENSED\"},\"contracts/random/UnsafeRandom.sol\":{\"content\":\"//SPDX-License-Identifier: UNLICENSED\\n//0xTinman.eth 2021\\npragma solidity ^0.8.0;\\n//SafeMath Contract\\nimport '@openzeppelin/contracts/utils/math/SafeMath.sol';\\nimport '../RandomNumber.sol';\\n\\ncontract UnsafeRandom is RandomNumber {\\n    uint256 internal numberSeed = 12456789;\\n\\n    constructor(uint32 seedNumber, address valuesContract)\\n        RandomNumber(valuesContract)\\n    {\\n        numberSeed = seedNumber;\\n    }\\n\\n    function returnNumber(uint256 maxNumber, uint256 _salt)\\n        public\\n        view\\n        override\\n        returns (uint256)\\n    {\\n        if (maxNumber <= 0) maxNumber = 1;\\n        uint256 c = uint256(\\n            keccak256(\\n                abi.encode(\\n                    numberSeed,\\n                    _salt,\\n                    maxNumber,\\n                    block.difficulty,\\n                    block.number,\\n                    block.timestamp,\\n                    msg.sender, //is this contract or who ever calls this\\n                    randomnessFactor\\n                )\\n            )\\n        );\\n\\n        (bool safe, uint256 result) = SafeMath.tryMod(c, maxNumber);\\n\\n        if (safe) return result;\\n\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0xdd5175b44ca4df04f2036b44c40fedc80357a205999a1833411759e027541e2b\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x60806040526001805460ff1916815560025562be135560045534801561002457600080fd5b5060405161046f38038061046f833981016040819052610043916100f4565b600380546001600160a01b0319166001600160a01b0383169081179091556040516304b01c2560e51b815260206004820152600f60248201526e3930b73237b6b2b9b9a330b1ba37b960891b604482015282919063960384a090606401602060405180830381865afa1580156100bd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100e19190610143565b600055505063ffffffff1660045561015c565b6000806040838503121561010757600080fd5b825163ffffffff8116811461011b57600080fd5b60208401519092506001600160a01b038116811461013857600080fd5b809150509250929050565b60006020828403121561015557600080fd5b5051919050565b6103048061016b6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806307aaf42d146100675780634b0c7aad14610089578063a0d0ca0f146100aa578063bfa0b133146100bd578063ceb42337146100c6578063f2c9ecd8146100cf575b600080fd5b6001546100749060ff1681565b60405190151581526020015b60405180910390f35b61009c610097366004610264565b6100d7565b604051908152602001610080565b61009c6100b8366004610286565b610171565b61009c60025481565b61009c60005481565b61009c61018a565b60008083116100e557600192505b600454600080546040805160208101949094528301859052606083018690524460808401524360a08401524260c08401523360e084015261010083015290610120016040516020818303038152906040528051906020012060001c905060008061014f8387610233565b91509150811561016357925061016b915050565b600093505050505b92915050565b600280546001019081905560009061016b9083906100d7565b6002805460010190556003546040516304b01c2560e51b815260206004820152600f60248201526e36b0bc2930b73237b6a73ab6b132b960891b604482015260009161022e916001600160a01b039091169063960384a090606401602060405180830381865afa158015610202573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610226919061029f565b6002546100d7565b905090565b600080826102465750600090508061025d565b6001838581610257576102576102b8565b06915091505b9250929050565b6000806040838503121561027757600080fd5b50508035926020909101359150565b60006020828403121561029857600080fd5b5035919050565b6000602082840312156102b157600080fd5b5051919050565b634e487b7160e01b600052601260045260246000fdfea2646970667358221220f80f15f30be9ffa40644192f13913088d56e58be8a1301d4d27dfde3183b525064736f6c634300080c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806307aaf42d146100675780634b0c7aad14610089578063a0d0ca0f146100aa578063bfa0b133146100bd578063ceb42337146100c6578063f2c9ecd8146100cf575b600080fd5b6001546100749060ff1681565b60405190151581526020015b60405180910390f35b61009c610097366004610264565b6100d7565b604051908152602001610080565b61009c6100b8366004610286565b610171565b61009c60025481565b61009c60005481565b61009c61018a565b60008083116100e557600192505b600454600080546040805160208101949094528301859052606083018690524460808401524360a08401524260c08401523360e084015261010083015290610120016040516020818303038152906040528051906020012060001c905060008061014f8387610233565b91509150811561016357925061016b915050565b600093505050505b92915050565b600280546001019081905560009061016b9083906100d7565b6002805460010190556003546040516304b01c2560e51b815260206004820152600f60248201526e36b0bc2930b73237b6a73ab6b132b960891b604482015260009161022e916001600160a01b039091169063960384a090606401602060405180830381865afa158015610202573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610226919061029f565b6002546100d7565b905090565b600080826102465750600090508061025d565b6001838581610257576102576102b8565b06915091505b9250929050565b6000806040838503121561027757600080fd5b50508035926020909101359150565b60006020828403121561029857600080fd5b5035919050565b6000602082840312156102b157600080fd5b5051919050565b634e487b7160e01b600052601260045260246000fdfea2646970667358221220f80f15f30be9ffa40644192f13913088d56e58be8a1301d4d27dfde3183b525064736f6c634300080c0033",
+  "libraries": {
+    "InfinityMintUtil": "0x3411DEa54B2FB5aB203616bB614D61794432d7B1"
+  },
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "returnNumber(uint256,uint256)": {
+        "notice": "cheap return number"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7854,
+        "contract": "contracts/random/UnsafeRandom.sol:UnsafeRandom",
+        "label": "randomnessFactor",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 7857,
+        "contract": "contracts/random/UnsafeRandom.sol:UnsafeRandom",
+        "label": "hasDeployed",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 7860,
+        "contract": "contracts/random/UnsafeRandom.sol:UnsafeRandom",
+        "label": "salt",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 7863,
+        "contract": "contracts/random/UnsafeRandom.sol:UnsafeRandom",
+        "label": "valuesController",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_contract(InfinityMintValues)7070"
+      },
+      {
+        "astId": 16315,
+        "contract": "contracts/random/UnsafeRandom.sol:UnsafeRandom",
+        "label": "numberSeed",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(InfinityMintValues)7070": {
+        "encoding": "inplace",
+        "label": "contract InfinityMintValues",
+        "numberOfBytes": "20"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

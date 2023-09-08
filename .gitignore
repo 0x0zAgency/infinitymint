@@ -1,0 +1,52 @@
+#Infinity Mint
+
+temp_uri
+.temp_uri
+.token_prices
+/settings/
+/projects/*.json
+/results/
+/contracts/tests/assets/
+/contracts/tests/random/
+/references/
+/temp/
+/contracts/custom/*
+.force_network
+/node_modules/
+/test/
+
+#Yarn
+yarn-error.log
+yarn.lock
+node_modules
+coverage
+coverage.json
+typechain
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+package-lock.json
+
+#Hardhat files
+cache/
+artifacts/
+.env
+.keys
+.temp_project
+.gas_prices
+.mnemonic
+.project
+.ganache
+
+#Mac trash
+.DS_Store
+.DS_store
+.ds_store
+
+#editor configs and swap files 
+.swp
+.editorconfig
+.yarn/releases/yarn-3.3.1.cjs

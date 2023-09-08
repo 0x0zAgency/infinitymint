@@ -1,0 +1,68 @@
+@keyframes flicker {
+    from {
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+            -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    to {
+        text-shadow: 6px 2px 0 #3fa9, 1px -1px 0 #3fa9, 1px -1px 0 #3f3f,
+            -1px 1px 0 #3f3f, 1px 1px 0 #3f3f3f;
+    }
+}
+
+/* This fixes the navbar header colours to force out of ugly bootstrap grey */
+a[role='button'] {
+    color: white !important;
+}
+
+.textGold {
+    animation: flicker 1.5s infinite alternate;
+    -webkit-text-stroke: 1px var(--bs-list-group-active-bg);
+    text-shadow: 6px 2px 0 #3fa9, 1px -1px 0 #3fa9, 1px -1px 0 #3f3f,
+        -1px 1px 0 #3f3f, 1px 1px 0 #3f3f3f;
+}
+
+.neonText {
+    font-family: 'Pacifico', cursive;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinText {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    background-image: none !important;
+    animation-iteration-count: infinite;
+}

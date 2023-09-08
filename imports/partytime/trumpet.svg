@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="svg2" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <g id="b" data-name="Layer 1">
+    <path id="c" data-name="path7" d="m748,506.87c27.8,0,50.36,22.57,50.36,50.36s-22.56,50.36-50.36,50.36-50.36-22.56-50.36-50.36,22.56-50.36,50.36-50.36" style="fill: #8bd3e5; fill-rule: evenodd; stroke: #000;"/>
+    <path id="d" data-name="path9" d="m748,527.01c16.68,0,30.22,13.54,30.22,30.22s-13.54,30.22-30.22,30.22-30.22-13.54-30.22-30.22,13.54-30.22,30.22-30.22" style="fill: #fff; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="e" data-name="polygon11" points="929.23 376.02 929.23 496.89 909.08 496.89 909.08 376.02 909.08 376.02 929.23 376.02" style="fill: #f0037f; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="f" data-name="polygon13" points="929.23 496.89 929.23 617.77 909.08 617.77 909.08 496.89 909.08 496.89 929.23 496.89" style="fill: red; fill-rule: evenodd; stroke: #000;"/>
+    <line id="g" data-name="line15" x1="929.23" y1="496.89" x2="949.37" y2="496.89" style="fill: none; stroke: #000;"/>
+    <polygon id="h" data-name="polygon17" points="909.08 496.89 909.08 517.04 647.19 517.04 647.19 496.89 647.19 496.89 909.08 496.89" style="fill: #668187; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="i" data-name="polygon19" points="909.08 476.74 909.08 496.89 647.19 496.89 647.19 476.74 647.19 476.74 909.08 476.74" style="fill: #ff0; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="j" data-name="polygon21" points="909.08 436.45 909.08 476.74 828.5 476.74 828.5 436.45 828.5 436.45 909.08 436.45" style="fill: #ff7f00; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="k" data-name="polygon23" points="909.08 517.04 909.08 557.33 828.5 557.33 828.5 517.04 828.5 517.04 909.08 517.04" style="fill: #ff0; fill-rule: evenodd; stroke: #000;"/>
+    <path id="l" data-name="path25" d="m909.08,376.02c-10.31,23.61-36.75,43.35-80.58,60.44-44.08,16.92-103.79,30.06-181.31,40.29m261.89,141.02c-10.31-23.69-36.75-43.51-80.58-60.44-44.08-17-103.79-30.14-181.31-40.29m261.89-141.02c26.92,40.61,40.13,80.18,40.29,120.87-.16,40.61-13.37,80.18-40.29,120.87" style="fill: none; stroke: #000;"/>
+    <polygon id="m" data-name="polygon27" points="647.19 486.82 647.19 496.89 435.66 496.89 435.66 486.82 435.66 486.82 647.19 486.82" style="fill: #33a02c; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="n" data-name="polygon29" points="435.66 486.82 435.66 496.89 224.13 496.89 224.13 486.82 224.13 486.82 435.66 486.82" style="fill: #0a50a1; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="o" data-name="polygon31" points="647.19 496.89 647.19 506.96 435.66 506.96 435.66 496.89 435.66 496.89 647.19 496.89" style="fill: #009193; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="p" data-name="polygon33" points="435.66 496.89 435.66 506.96 224.13 506.96 224.13 496.89 224.13 496.89 435.66 496.89" style="fill: #8bd3e5; fill-rule: evenodd; stroke: #000;"/>
+    <path id="q" data-name="path35" d="m647.19,476.74c-71.31,5.16-140.37,8.22-211.53,10.07-71.32,1.61-140.38,1.61-211.53,0m423.06,30.22c-71.32-5.24-140.37-8.3-211.53-10.07-71.32-1.77-140.38-1.77-211.53,0m.08-20.24c38.92,0,70.51,31.59,70.51,70.51s-31.59,70.51-70.51,70.51-70.51-31.59-70.51-70.51,31.59-70.51,70.51-70.51" style="fill: #fff; stroke: #000;"/>
+    <path id="r" data-name="path37" d="m224.21,506.87c27.8,0,50.36,22.57,50.36,50.36s-22.56,50.36-50.36,50.36-50.36-22.56-50.36-50.36,22.56-50.36,50.36-50.36" style="fill: #f0037f; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="s" data-name="polygon39" points="526.31 466.67 526.31 647.98 496.09 647.98 496.09 466.67 496.09 466.67 526.31 466.67" style="fill: #f0037f; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="t" data-name="polygon41" points="486.02 466.67 486.02 647.98 455.8 647.98 455.8 466.67 455.8 466.67 486.02 466.67" style="fill: #fbc0df; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="u" data-name="polygon43" points="445.73 466.67 445.73 647.98 415.51 647.98 415.51 466.67 415.51 466.67 445.73 466.67" style="fill: red; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="v" data-name="polygon45" points="405.44 607.69 405.44 627.84 224.13 627.84 224.13 607.69 224.13 607.69 405.44 607.69" style="fill: #00a0c6; fill-rule: evenodd; stroke: #000;"/>
+    <path id="w" data-name="path47" d="m294.58,567.3c16.68,0,30.22,13.54,30.22,30.22s-13.54,30.22-30.22,30.22-30.22-13.54-30.22-30.22,13.54-30.22,30.22-30.22" style="fill: #165829; fill-rule: evenodd; stroke: #000;"/>
+    <path id="x" data-name="path49" d="m296.2,587.45c5.56,0,10.07,4.51,10.07,10.07s-4.51,10.07-10.07,10.07-10.07-4.52-10.07-10.07,4.51-10.07,10.07-10.07" style="fill: #fff; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="y" data-name="polygon51" points="405.44 567.4 405.44 587.55 294.64 587.55 294.64 567.4 294.64 567.4 405.44 567.4" style="fill: #ff0; fill-rule: evenodd; stroke: #000;"/>
+    <path id="z" data-name="path53" d="m717.65,567.3c16.68,0,30.22,13.54,30.22,30.22s-13.54,30.22-30.22,30.22-30.22-13.54-30.22-30.22,13.54-30.22,30.22-30.22" style="fill: #f0037f; fill-rule: evenodd; stroke: #000;"/>
+    <path id="aa" data-name="path55" d="m719.26,587.45c5.56,0,10.07,4.51,10.07,10.07s-4.51,10.07-10.07,10.07-10.07-4.52-10.07-10.07,4.51-10.07,10.07-10.07" style="fill: #fff; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="ab" data-name="polygon57" points="717.7 567.4 717.7 587.55 536.38 587.55 536.38 567.4 536.38 567.4 717.7 567.4" style="fill: red; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="ac" data-name="polygon59" points="717.7 607.69 717.7 627.84 536.38 627.84 536.38 607.69 536.38 607.69 717.7 607.69" style="fill: #ff7f00; fill-rule: evenodd; stroke: #000;"/>
+    <path id="ad" data-name="path61" d="m578.02,522.8c11.12,0,20.15,9.02,20.15,20.15s-9.03,20.15-20.15,20.15-20.15-9.02-20.15-20.15,9.02-20.15,20.15-20.15" style="fill: #fff; fill-rule: evenodd; stroke: #000;"/>
+    <path id="ae" data-name="path63" d="m577.75,527.61c8.32,0,15.07,6.75,15.07,15.07s-6.75,15.06-15.07,15.06-15.07-6.75-15.07-15.06c0-8.32,6.75-15.07,15.07-15.07" style="fill: #f0037f; fill-rule: evenodd; stroke: #000;"/>
+    <polygon id="af" data-name="polygon65" points="193.91 486.82 193.91 506.96 83.11 506.96 83.11 486.82 83.11 486.82 193.91 486.82" style="fill: red; fill-rule: evenodd; stroke: #000;"/>
+    <path id="ag" data-name="path67" d="m415.42,458.45h30.22v-10.07c-3.55-1.93-6.61-3.22-10.07-3.87-3.55-.64-6.61-.64-10.07,0-3.55.64-6.61,1.93-10.07,3.87v10.07Zm40.29,0h30.22v-10.07c-3.55-1.93-6.61-3.22-10.07-3.87-3.55-.64-6.61-.64-10.07,0-3.55.64-6.61,1.93-10.07,3.87v10.07Zm40.29,0h30.22v-10.07c-3.55-1.93-6.61-3.22-10.07-3.87-3.55-.64-6.61-.64-10.07,0-3.55.64-6.61,1.93-10.07,3.87v10.07Zm-403.23,18.37c5.56,0,10.07,4.51,10.07,10.07h-.08,81.63c-6.04,2.58-11.2,5.56-15.79,8.94-4.59,3.3-8.62,6.93-11.77,11.2h-54.07.08c0,5.56-4.51,10.08-10.07,10.08v5.4h-20.15v-52.46h20.15s0,6.77,0,6.77Z" style="fill: #ff7f00; stroke: #000;"/>
+  </g>
+</svg>

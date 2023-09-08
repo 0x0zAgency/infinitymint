@@ -1,0 +1,15 @@
+{
+  "name": "InfinityMint - Bets",
+  "title": "Betting system allowing you to create bets which have branches",
+  "author": "0x0z.eth, 0xWizardof0z.eth, 0xTinman.eth",
+  "description": "",
+  "version": 1,
+  "permissions": {
+    "approved": [
+      ""
+    ]
+  },
+  "requirements": {
+    "project": ""
+  }
+}

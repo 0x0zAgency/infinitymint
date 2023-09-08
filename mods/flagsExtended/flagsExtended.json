@@ -1,0 +1,7 @@
+{
+  "name": "Flags Extended",
+  "author": "0xTinman.eth",
+  "description": "A mod which improves the UI and functionality of the token flag and address option system. Users can see the flags they have set for each token and options they have set which effect the whole mint.",
+  "version": 1,
+  "dependencies": []
+}

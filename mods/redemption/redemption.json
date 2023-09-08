@@ -1,0 +1,13 @@
+{
+  "name": "🎟️ Redemption Tools",
+  "author": "0x0zAgency",
+  "description": "Offers two forms of redemption for ERC721 tokens. The first method is a passcode (💿Keys.eth) based system which doesn't need any wallets to be set up. The second is classic Merkle Tree requiring addresses.",
+  "version": 1,
+  "production": true,
+  "requirements": {
+    "version": "hydra"
+  },
+  "dependencies": [
+    "@openzeppelin/contracts"
+  ]
+}

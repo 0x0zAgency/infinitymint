@@ -1,0 +1,15 @@
+{
+  "name": "🥃Club.eth Gem",
+  "title": "🥃Club.eth Gem",
+  "author": "0x0z.eth, 0xWizardof0z.eth, 0xTinman.eth",
+  "description": "A gem to support NFT bar and drink features.",
+  "version": 1,
+  "permissions": {
+    "approved": [
+      ""
+    ]
+  },
+  "requirements": {
+    "project": ""
+  }
+}

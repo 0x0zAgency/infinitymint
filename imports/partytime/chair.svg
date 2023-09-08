@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg2"
+    sodipodi:docname="purple armless chair.svg"
+    viewBox="0 0 335.87 379.77"
+    sodipodi:version="0.32"
+    version="1.0"
+    inkscape:output_extension="org.inkscape.output.svg.inkscape"
+    inkscape:version="0.45.1"
+    sodipodi:docbase="C:\Documents and Settings\Owner\Desktop\SVG\Paul's Images"
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      guidetolerance="10.0"
+      pagecolor="#ffffff"
+      gridtolerance="10.0"
+      inkscape:zoom="0.27727358"
+      objecttolerance="10.0"
+      borderopacity="1.0"
+      inkscape:current-layer="svg2"
+      inkscape:cx="13.478802"
+      inkscape:cy="470.71956"
+      inkscape:window-y="-4"
+      inkscape:window-x="-4"
+      inkscape:window-height="708"
+      inkscape:pageopacity="0.0"
+      inkscape:window-width="1024"
+  />
+  <g
+      id="Chair"
+      transform="translate(171.1 189.59)"
+    >
+    <path
+        id="Cushion"
+        sodipodi:nodetypes="cccccccc"
+        style="fill-rule:evenodd;stroke:#432d39;stroke-width:1px;fill:#644c62"
+        d="m-37.324 173.93l160.21-78.515 41.38-263.12c-47.48-8.7-102.21-34.81-136.87-12.75-33.641 49.32-47.111 93.002-44.565 150.67-26.565-9.824-119.2 9.608-142.18 33.949-22.63 41.733-9.47 72.212 24.48 113.94l97.536 55.82z"
+    />
+    <path
+        id="Lines"
+        sodipodi:nodetypes="ccccccccccccc"
+        style="stroke:#4b324b;stroke-width:1px;fill:none"
+        d="m16.051-162.84c37.246-0.8 79.355 4.15 112.99 30.92m-43.512 144.79l42.762-142.54c8.3-11.48 19.82-31.5 35.72-39.18m-227.03 253.75c49.016-47.639 98.032-51.402 147.05-69.773m-251.33 7.502c34.76 10.589 69.518 28.239 104.28 60.77 21.957 29.944 21.979 61.884 22.507 93.784m21.757-206.32l103.53 42.764-1.497 103.54"
+    />
+    <g
+        id="Feet"
+        transform="translate(284.35 -7.6506)"
+      >
+      <path
+          id="path3206"
+          style="fill-rule:evenodd;stroke:#624b5d;stroke-width:1px;fill:#332429"
+          d="m-341.58 171.43l7.44 17.37 17.26 8.53 15.3-9.59 9.18-23.15-22.57 13.34c-2.52 2.16-5.26 2.81-8.24 1.78l-18.37-8.28zm-81.1-46.01l8.41 14.94 12.65 7.68 10.7-5.58-14.72-9.25-17.04-7.79zm218.66-5.37l0.28 3.66 14.95 8.17 13.61-6.92 10.39-22.03-25.96 12.9-13.27 4.22z"
+      />
+      <path
+          id="path3212"
+          sodipodi:nodetypes="cccccc"
+          style="fill-rule:evenodd;stroke:#624b5d;stroke-width:1px;fill:#332429"
+          d="m-316.78 197.1l-0.14-17.92m-85.58-44.01l1.13 12.46m214.52-33.56l-1.71 17.75"
+      />
+    </g
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >Purple armless chair</dc:title
+        >
+        <dc:date
+          >2010-01-28T18:43:23</dc:date
+        >
+        <dc:description
+          >A nice, soft, purple armless chair.  Also available in other colors in this collection.</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/29088/purple-armless-chair-by-rfc1394-29088</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >Rfc1394</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >cartoon</rdf:li
+            >
+            <rdf:li
+              >chair</rdf:li
+            >
+            <rdf:li
+              >colour</rdf:li
+            >
+            <rdf:li
+              >furniture</rdf:li
+            >
+            <rdf:li
+              >purple</rdf:li
+            >
+            <rdf:li
+              >soft</rdf:li
+            >
+            <rdf:li
+              >unchecked</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

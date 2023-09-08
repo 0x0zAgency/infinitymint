@@ -1,0 +1,13 @@
+{
+  "name": "♾️Mint.eth Clone Machine Gem",
+  "title": "♾️Mint.eth Clone Machine Gem",
+  "author": "0xTinman.eth, 0xWizardof0z.eth, 0xTinman.eth",
+  "description": "This gem adds tools which allow you to deploy cloned variants of the main minter the gem is applied too. The initial deployment is owned by you, but you can pass these clone minters to anyone else to own outright. They share the same asset trees, minter and values from your initial deployment while keeping the Royalty contracts soverign. This allows you to create a new minter for each project you work on, and then pass it to the project owner to own and manage. This allows you to keep your minters clean and free of any project specific data.",
+  "version": 1,
+  "predeployment": true,
+  "production": true,
+  "disabled": [
+    "cloneMachine"
+  ],
+  "dependencies": []
+}
