@@ -1,0 +1,12 @@
+name: Install dependencies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  install-dependencies:
+    runs-on:  self-hosted
+
+    steps:
+      - uses: actions/checkout@v2 
+      - run: npm install
