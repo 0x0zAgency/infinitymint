@@ -1,12 +1,15 @@
 {
-    "name": "infinitymint",
+    "name": "infinitymint-bt",
     "version": "0.69.0-bt+000",
     "private": false,
     "infinityMint": {
         "allowImport": true
     },
     "author": {
-        "name": "0x0zAgency"
+        "name": "0x0zAgency",
+        "email": "z@0x0z.me",
+        "url": "https://0x0z.xyz",
+        "twitter": "@0x0zAgency"
     },
     "scripts": {
         "build_polygonzkevm": "node scripts/initial.js network=polygonzkevm && npx hardhat deploy",

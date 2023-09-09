@@ -1,11 +1,11 @@
 {
-    "name": "infinitymint",
+    "name": "infinitymint-bt",
     "version": "0.69.0-bt+000",
     "lockfileVersion": 2,
     "requires": true,
     "packages": {
         "": {
-            "name": "infinitymint",
+            "name": "infinitymint-bt",
             "version": "0.69.0-bt+000",
             "dependencies": {
                 "@nomiclabs/hardhat-ethers": "2.0.0",
