@@ -53,3 +53,4 @@ artifacts/
 .swp
 .editorconfig
 .yarn/releases/yarn-3.3.1.cjs
+.npmrc
