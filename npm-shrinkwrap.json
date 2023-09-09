@@ -26782,7 +26782,7 @@
         },
         "node_modules/infinitymint": {
             "version": "1.21.0.69",
-            "resolved": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+            "resolved": "file:0x0z/infinitymint-1.21.0.69.tgz",
             "integrity": "sha512-hrQw9KC+vEnVNclASFBMASczn1K4yvIRY5LuV1hPbcVrQ68KWWhgABDXQ/XSPuamzFBQ7TJeva5Z32vpTZFmag==",
             "license": "MIT",
             "dependencies": {
@@ -26833,7 +26833,7 @@
         },
         "node_modules/infinitymint-client": {
             "version": "2.5.2.69",
-            "resolved": "file:./0x0z/infinitymint-client-2.5.2.69.tgz",
+            "resolved": "file:0x0z/infinitymint-client-2.5.2.69.tgz",
             "integrity": "sha512-wD3P869bmMWN30JuOYPPHjRlBo1MjJ5OfXdsHUlpoeJ+/swp4sX0M15mATQXq6CUpklwXal0dwV1eBuKXg5yUw==",
             "license": "MIT",
             "dependencies": {
@@ -26873,7 +26873,7 @@
                 "http-browserify": "^1.7.0",
                 "https-browserify": "^1.0.0",
                 "identity-obj-proxy": "^3.0.0",
-                "infinitymint": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+                "infinitymint": "file:./../0x0z/infinitymint-1.21.0.69.tgz",
                 "jest": "^27.4.3",
                 "jest-resolve": "^27.4.2",
                 "jest-watch-typeahead": "^1.0.0",
@@ -66698,7 +66698,7 @@
             "optional": true
         },
         "infinitymint": {
-            "version": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+            "version": "file:0x0z/infinitymint-1.21.0.69.tgz",
             "integrity": "sha512-hrQw9KC+vEnVNclASFBMASczn1K4yvIRY5LuV1hPbcVrQ68KWWhgABDXQ/XSPuamzFBQ7TJeva5Z32vpTZFmag==",
             "requires": {
                 "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
@@ -67659,7 +67659,7 @@
             }
         },
         "infinitymint-client": {
-            "version": "file:./0x0z/infinitymint-client-2.5.2.69.tgz",
+            "version": "file:0x0z/infinitymint-client-2.5.2.69.tgz",
             "integrity": "sha512-wD3P869bmMWN30JuOYPPHjRlBo1MjJ5OfXdsHUlpoeJ+/swp4sX0M15mATQXq6CUpklwXal0dwV1eBuKXg5yUw==",
             "requires": {
                 "@babel/core": "^7.16.0",
@@ -67698,7 +67698,7 @@
                 "http-browserify": "^1.7.0",
                 "https-browserify": "^1.0.0",
                 "identity-obj-proxy": "^3.0.0",
-                "infinitymint": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+                "infinitymint": "file:../0x0z/infinitymint-1.21.0.69.tgz",
                 "jest": "^27.4.3",
                 "jest-resolve": "^27.4.2",
                 "jest-watch-typeahead": "^1.0.0",
