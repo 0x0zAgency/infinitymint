@@ -1,6 +1,6 @@
 {
     "name": "infinitymint",
-    "version": "0.69.0.bt",
+    "version": "0.69.0-bt+000",
     "private": false,
     "infinityMint": {
         "allowImport": true
