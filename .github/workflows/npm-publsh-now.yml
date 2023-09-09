@@ -4,6 +4,13 @@ on:
     workflow_dispatch:
 
 jobs:
+
+  clean_npm_cache:
+    runs-on:  self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm cache clean --force
   
   build:
     runs-on: self-hosted
@@ -12,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.5.0"
-      - run: npm i 
+      - run: npm ci 
       - run: npm test
 
   publish-npm:
@@ -24,7 +31,7 @@ jobs:
         with:
           node-version: "18.5.0"
           registry-url: https://registry.npmjs.org/
-      - run: npm i 
+      - run: npm ci 
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
