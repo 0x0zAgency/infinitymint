@@ -8,6 +8,12 @@ on:
     types: [created]
 
 jobs:
+  clean_npm_cache:
+    runs-on:  self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm cache clean --force
   build:
     runs-on: self-hosted
     steps:

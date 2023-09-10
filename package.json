@@ -1,6 +1,33 @@
 {
     "name": "infinitymint-bt",
-    "version": "0.69.0-bt+000",
+    "version": "0.69.1-bt+000",
+    "description": "InfinityMint is your key to Web3 and Tokenized Commerce, Phygital Goods, and IP Dashboard",
+    "license": "MIT",
+    "funding": {
+        "type": "eth",
+        "url": "web3://0x0z.eth"
+    },
+    "homepage": "https://github.com/0x0zAgency",
+    "bugs": {
+        "url": "https://github.com/0x0zAgency/infinitymint-bt/issues",
+        "email": "z@0x0z.me"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0x0zAgency/infinitymint-bt.git"},
+    "keywords": [
+        "tokenized Commerce",
+        "t-commerce",
+        "tcommerce",   
+        "web3",
+        "ethereum",
+        "nft",
+        "dynamic nft",
+        "phygital",
+        "phygital goods",
+        "phygital goods marketplace",
+        "living nft"
+    ],
     "private": false,
     "infinityMint": {
         "allowImport": true
