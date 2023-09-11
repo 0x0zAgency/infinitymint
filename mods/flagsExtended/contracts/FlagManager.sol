@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 //in order for the linter to work, it must access an actual valid file
-import 'infinitymint/alpha/ERC721.sol'; //all of these will be remapped by Initial to point to where the file actually is
-import 'infinitymint/alpha/InfinityMint.sol';
+import 'contracts/ERC721.sol'; //all of these will be remapped by Initial to point to where the file actually is
+import 'contracts/InfinityMint.sol';
 
 contract Mod_FlagManager is Authentication, InfinityMintObject {
     InfinityMint erc721;

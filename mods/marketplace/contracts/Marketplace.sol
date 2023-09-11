@@ -2,9 +2,9 @@
 //0xTinman.eth 2021
 pragma solidity ^0.8.0;
 
-import 'infinitymint/alpha/InfinityMint.sol';
-import 'infinitymint/alpha/InfinityMintApi.sol';
-import 'infinitymint/alpha/IERC721.sol';
+import 'contracts/InfinityMint.sol';
+import 'contracts/InfinityMintApi.sol';
+import 'contracts/IERC721.sol';
 
 contract Mod_Marketplace is InfinityMintObject {
     address infinityMint;

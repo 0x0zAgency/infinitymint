@@ -1,5 +1,8 @@
 # InfinityMint Build Tools by 0x0zAgency
 
+Current Version: Schrödinger's Edition (🐈,🐈‍⬛)
+## 🧱 - [See how ♾️Mint created a Phygital Storefront for Chicago's premier click and mortar gallery and Metaverse Portal, <imnotArt>](https://imnot.art)
+
 # InfinityMint QuickStart Guide
 
 Say hello to Tokenized Commerce. Be your own marketplace! Sell your own tickets. Supercharge your Merch with the power of Phygital. Welcome to InfintyMint. A Web3 EVM Based Multi-chain Dynamic NFT Platform. A Minter that Mints minters which integrate with our EADS.eth supply-side advertising and sponsorship platform, and allows creators to mint an ∞ of NFT projects from PFP/Metaverse Portal Projects, to 1:1 NFTs, to Music NFTs.

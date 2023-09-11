@@ -11,9 +11,13 @@ temp_uri
 /references/
 /temp/
 /contracts/custom/*
+/contracts/__mods/
 .force_network
 /node_modules/
 /test/
+package_lock.json
+/actions-runner
+
 
 #Yarn
 yarn-error.log
@@ -49,3 +53,5 @@ artifacts/
 .swp
 .editorconfig
 .yarn/releases/yarn-3.3.1.cjs
+.npmrc
+package-lock copy.json
