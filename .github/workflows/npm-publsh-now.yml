@@ -25,10 +25,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.5.0"
-          registry-url: https://npm.pkg.github.com/
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@0x0zagency'
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   publish-npm:
     needs: build
