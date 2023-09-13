@@ -88,70 +88,90 @@ class RedemptionControls extends Component {
 
     async checkForRequests() {
         let requests = {};
-
-        for (let i = 0; i < this.state.tokens.length; i++) {
-            let tokenId = this.state.tokens[i].tokenId;
-            let result = this.state.checks[tokenId][2];
-
-            if (result) {
-                let obj = await Controller.callMethod(
-                    Controller.accounts[0],
-                    'Mod_Redemption',
-                    'getRequest',
-                    [tokenId]
-                );
-                requests[tokenId] = {
-                    sender: obj.sender,
-                    redemption: obj.redemption,
-                    key: obj.key,
-                    valid: obj.valid,
-                    tokenId: tokenId,
-                };
-            }
+    
+        try {
+            const tokens = this.state.tokens;
+            const checks = this.state.checks;
+    
+            const requestPromises = tokens.map(async (token, i) => {
+                const tokenId = token.tokenId;
+                const result = checks[tokenId][2];
+    
+                if (result) {
+                    try {
+                        const obj = await Controller.callMethod(
+                            Controller.accounts[0],
+                            'Mod_Redemption',
+                            'getRequest',
+                            [tokenId]
+                        );
+                        requests[tokenId] = {
+                            sender: obj.sender,
+                            redemption: obj.redemption,
+                            key: obj.key,
+                            valid: obj.valid,
+                            tokenId: tokenId,
+                        };
+                    } catch (error) {
+                        console.error(`Error fetching details for tokenId ${tokenId}:`, error);
+                    }
+                }
+            });
+    
+            await Promise.all(requestPromises);
+        } catch (error) {
+            console.error('Error in checkForRequests:', error);
         }
-
+    
         StorageController.setPagePreference('requests', requests);
         this.setState({
             hasRequests: Object.values(requests).length !== 0,
             requests: requests,
         });
+    
+        return requests;
     }
-
+    
     async checkRedeemable() {
         let redeemables = { ...this.state.redeeemables };
         let redeemed = { ...this.state.redeemed };
-
-        for (let i = 0; i < this.state.tokens.length; i++) {
-            let tokenId = this.state.tokens[i].tokenId;
-                console.log('tokenId: ', tokenId);
-            let result = this.state.checks[tokenId][0] === true;
-                console.log('result: ', result);
-            if (result) {
-                let redemptionCode = await Controller.callMethod(
-                    Controller.accounts[0],
-                    'Mod_Redemption',
-                    'getActiveRedemption',
-                    [tokenId]
-                );
-
-                redeemables[tokenId] = redemptionCode;
-                console.log('redeemables: ', redeemables[tokenId]);
-            }
-
-            result = this.state.checks[tokenId][1] === true;
-
-            if (result) {
-                let redemption = await Controller.callMethod(
-                    Controller.accounts[0],
-                    'Mod_Redemption',
-                    'getRedemptionProof',
-                    [tokenId]
-                );
-
-                redeemed[tokenId] = redemption;
-            }
+    
+        try {
+            const tokens = this.state.tokens;
+            const checks = this.state.checks;
+    
+            const requestPromises = tokens.map(async (token, i) => {
+                const tokenId = token.tokenId;
+                let result = checks[tokenId][0] === true;
+    
+                if (result) {
+                    const redemptionCode = await Controller.callMethod(
+                        Controller.accounts[0],
+                        'Mod_Redemption',
+                        'getActiveRedemption',
+                        [tokenId]
+                    );
+                    redeemables[tokenId] = redemptionCode;
+                }
+    
+                result = checks[tokenId][1] === true;
+    
+                if (result) {
+                    const redemption = await Controller.callMethod(
+                        Controller.accounts[0],
+                        'Mod_Redemption',
+                        'getRedemptionProof',
+                        [tokenId]
+                    );
+                    redeemed[tokenId] = redemption;
+                }
+            });
+    
+            await Promise.all(requestPromises);
+        } catch (error) {
+            console.error('Error in checkRedeemable:', error);
         }
-
+    
         StorageController.setPagePreference('redeemable', redeemables);
         StorageController.setPagePreference('redeemed', redeemed);
         this.setState({
@@ -159,293 +179,336 @@ class RedemptionControls extends Component {
             redeemed: redeemed,
         });
     }
+    
 
     async getChecks(tokenId) {
-        return await Controller.callMethod(
-            Controller.accounts[0],
-            'Mod_Redemption',
-            'getChecks',
-            [tokenId]
-        );
-    }
-
-    async getTokens(page = 0) {
-        this.setState({
-            tokens: {},
-            hasTokens: false,
-        });
-
-        let results = await Controller.getTokens(
-            50,
-            page,
-            this.state.deploymentAddress
-        );
-
-        let checks = {};
-        for (let i = 0; i < results.length; i++) {
-            let result = results[i];
-            checks[result.token.tokenId] = await this.getChecks(
-                result.token.tokenId
+        try {
+            return await Controller.callMethod(
+                Controller.accounts[0],
+                'Mod_Redemption',
+                'getChecks',
+                [tokenId]
             );
+        } catch (error) {
+            console.error('Error in getChecks:', error);
+            throw error; 
         }
-
-        results = results.map((result) => {
-            let token = {
-                ...(result.token || {}),
-                noPhrase: false,
-                notRedeemable: checks[result.token.tokenId][0] !== true,
-            };
-
-            if (this.state.phrases[result.token.tokenId] === undefined) {
-                token.noPhrase = true;
-            } else
-                token.phrase = this.state.phrases[result.token.tokenId].phrase;
-
-            return token;
-        });
-
-        if (results.length !== 0) {
-            this.setState({
-                hasTokens: true,
-                tokens: results,
-            });
-
-            let transfers = { ...this.state.transfers };
-
-            results.forEach((result) => {
-                if (transfers[result.token.tokenId] !== undefined)
-                    delete transfers[result.token.tokenId];
-            });
-
-            this.setState({
-                transfers: transfers,
-            });
-            StorageController.setPagePreference('transfers', transfers);
-        }
-
-        await waitSetState(this, {
-            checks: checks,
-        });
     }
+    
+    async rejectRequest(tokenId) {
+        try {
+            return await Controller.sendMethod(
+                Controller.accounts[0],
+                'Mod_Redemption',
+                'rejectRedeem',
+                [tokenId]
+            );
+        } catch (error) {
+            console.error('Error in rejectRequest:', error);
+            throw error; 
+        }
+    }
+    
+    async getTokens(page = 0) {
+        try {
+            this.setState({
+                tokens: {},
+                hasTokens: false,
+            });
+    
+            let results = await Controller.getTokens(
+                50,
+                page,
+                this.state.deploymentAddress
+            );
+    
+            const checkPromises = results.map(result => 
+                this.getChecks(result.token.tokenId)
+            );
+            const checks = Object.fromEntries(
+                await Promise.all(checkPromises)
+                    .then((values) => results.map((result, index) => [result.token.tokenId, values[index]]))
+            );
+    
+            results = results.map((result) => {
+                let token = {
+                    ...(result.token || {}),
+                    noPhrase: false,
+                    notRedeemable: checks[result.token.tokenId][0] !== true,
+                };
+    
+                if (this.state.phrases[result.token.tokenId] === undefined) {
+                    token.noPhrase = true;
+                } else {
+                    token.phrase = this.state.phrases[result.token.tokenId].phrase;
+                }
+    
+                return token;
+            });
+    
+            if (results.length !== 0) {
+                this.setState({
+                    hasTokens: true,
+                    tokens: results,
+                });
+    
+                let transfers = { ...this.state.transfers };
+    
+                results.forEach((result) => {
+                    if (transfers[result.token.tokenId] !== undefined)
+                        delete transfers[result.token.tokenId];
+                });
+    
+                this.setState({
+                    transfers: transfers,
+                });
+                StorageController.setPagePreference('transfers', transfers);
+            }
+    
+            await waitSetState(this, {
+                checks: checks,
+            });
+        } catch (error) {
+            console.error('Error in getTokens:', error);
+        }
+    }
+    
 
     async componentDidUpdate() {
-        if (
-            this.state.currentCypherKey !== undefined &&
-            this.state.currentCypherKey.length !== 0 &&
-            this.state.currentCypherKey !==
-                StorageController.getPagePreference('cypherKey', null, false)
-        )
-            StorageController.setPagePreference(
-                'cypherKey',
-                this.state.cypherKey
-            );
+        try {
+            if (
+                this.state.currentCypherKey !== undefined &&
+                this.state.currentCypherKey.length !== 0 &&
+                this.state.currentCypherKey !==
+                    StorageController.getPagePreference('cypherKey', null, false)
+            )
+                StorageController.setPagePreference(
+                    'cypherKey',
+                    this.state.currentCypherKey
+                );
+        } catch (error) {
+            console.error('Error in componentDidUpdate:', error);
+        }
     }
-
+    
     async componentDidMount() {
-        let transfers = StorageController.getPagePreference('transfers') || {};
-        let deployment = Config.getDeployment('Mod_Redemption');
-        //start row interval interval
-        let interval = setInterval(() => {
-            this.setState({
-                rowClass: decideRowClass(
-                    Object.values(this.state.tokens).length
-                ),
-            });
-        }, 1000);
-        let transferLength = Object.values(transfers).length;
-
-        //set state
-        await waitSetState(this, {
-            transfers: transfers,
-            deploymentAddress: deployment.address,
-            awaitingTransfer: transferLength !== 0,
-            rowInterval: interval,
-            phraseSet: this.state.unlinkedPhrases,
-        });
-
-        //get tokens
-        await this.getTokens();
-        //check redeemables
-        await this.checkRedeemable();
-        await this.checkForRequests();
-
-        this.setState({
-            rowClass: decideRowClass(Object.values(this.state.tokens).length),
-            loading: false,
-        });
-    }
-
-    async componentWillUnmount() {
-        clearInterval(this.state.rowInterval);
-    }
-
-    async transferTokens() {
-        let tokenIds = Object.values(this.state.transfers).map(
-            (tokens) => tokens.token.tokenId
-        );
-
-        await waitSetState(this, {
-            blocksLeft: this.state.totalBlocks,
-        });
-
-        while (tokenIds.length > 0) {
-            let selection = tokenIds.slice(0, blockSize);
-            if (tokenIds.length >= blockSize)
-                tokenIds = tokenIds.slice(blockSize);
-            else tokenIds = [];
-
-            await Controller.sendMethod(
-                Controller.accounts[0],
-                'InfinityMint',
-                'transferBatch',
-                {
-                    parameters: [selection, this.state.deploymentAddress],
-                    gasUsage: selection.length * 195000,
-                }
-            );
-
-            let transfers = { ...this.state.transfers };
-            selection.forEach((tokenId) =>
-                transfers[tokenId] !== undefined
-                    ? delete transfers[tokenId]
-                    : ''
-            );
+        try {
+            let transfers = StorageController.getPagePreference('transfers') || {};
+            let deployment = Config.getDeployment('Mod_Redemption');
+            let interval = setInterval(() => {
+                this.setState({
+                    rowClass: decideRowClass(
+                        Object.values(this.state.tokens).length
+                    ),
+                });
+            }, 1000);
+            let transferLength = Object.values(transfers).length;
+    
             await waitSetState(this, {
                 transfers: transfers,
-                blocksLeft: this.state.blocksLeft - 1,
-                awaitingTransfer: Object.values(transfers).length !== 0,
+                deploymentAddress: deployment.address,
+                awaitingTransfer: transferLength !== 0,
+                rowInterval: interval,
+                phraseSet: this.state.unlinkedPhrases,
             });
-            StorageController.setPagePreference('transfers', transfers);
+    
+            await this.getTokens();
+            await this.checkRedeemable();
+            await this.checkForRequests();
+    
+            this.setState({
+                rowClass: decideRowClass(Object.values(this.state.tokens).length),
+                loading: false,
+            });
+        } catch (error) {
+            console.error('Error in componentDidMount:', error);
         }
-
-        if (!this.state.awaitingTransfer)
-            StorageController.setPagePreference('transfers', {});
-
-        //get tokens
-        await this.getTokens();
-
-        this.setState({
-            showOverlay: false,
-            success: true,
-        });
     }
-
-    async makeRedeemable(tokens = {}) {
-        this.setState({
-            loading: true,
-        });
-        let keys = Object.keys(tokens);
-        let bytes = {};
-        let changedTokens = {};
-
-        for (let i = 0; i < keys.length; i++) {
-            let value = tokens[keys[i]];
-
-            if (
-                value.notRedeemable === false ||
-                this.state.redeemable[value.tokenId]
-            )
-                continue;
-
-            let phrase = value.phrase || this.state.phrases[value.tokenId];
-
-            if (phrase === undefined)
-                throw new Error('bad phrase for: ' + value.tokenId);
-
-            let encoded = Controller.web3.utils.encodePacked({
-                value: `${value.tokenId}|${phrase.length}|${this.state.phraseId}`,
-                type: 'string',
+    
+    async componentWillUnmount() {
+        try {
+            clearInterval(this.state.rowInterval);
+        } catch (error) {
+            console.error('Error in componentWillUnmount:', error);
+        }
+    }
+    
+    async transferTokens() {
+        try {
+            let tokenIds = Object.values(this.state.transfers).map(
+                (tokens) => tokens.token.tokenId
+            );
+    
+            await waitSetState(this, {
+                blocksLeft: this.state.totalBlocks,
             });
-
-            bytes[value.tokenId] = encoded;
-            changedTokens[value.tokenId] = value;
-        }
-
-        let redeemable = { ...this.state.redeemable };
-
-        let batches = {};
-        let entries = Object.entries(bytes);
-        let count = 0;
-        let batch = 0;
-        for (let [key, value] of entries) {
-            if (count > 16) {
-                batch++;
-                count = 0;
-            }
-
-            if (batches[batch] === undefined) batches[batch] = {};
-
-            batches[batch][key] = value;
-            count++;
-        }
-
-        for (let [_, bytesValue] of Object.entries(batches)) {
-            let values = Object.values(bytesValue);
-            let keys = Object.keys(bytesValue);
-
-            try {
+    
+            while (tokenIds.length > 0) {
+                let selection = tokenIds.splice(0, blockSize);
+    
                 await Controller.sendMethod(
                     Controller.accounts[0],
-                    'Mod_Redemption',
-                    'addRedemptions',
-                    [keys, values]
+                    'InfinityMint',
+                    'transferBatch',
+                    {
+                        parameters: [selection, this.state.deploymentAddress],
+                        gasUsage: selection.length * 195000,
+                    }
                 );
-
-                Object.keys(bytesValue).forEach((key) => {
-                    redeemable[key] = values[key];
-                    changedTokens[key].notRedeemable = false;
+    
+                let transfers = { ...this.state.transfers };
+                selection.forEach((tokenId) => {
+                    if (transfers[tokenId] !== undefined) {
+                        delete transfers[tokenId];
+                    }
                 });
-
-                StorageController.setPagePreference('redeemable', redeemable);
-            } catch (error) {
-                Controller.log(error);
+    
+                await waitSetState(this, {
+                    transfers: transfers,
+                    blocksLeft: this.state.blocksLeft - 1,
+                    awaitingTransfer: Object.values(transfers).length !== 0,
+                });
+                StorageController.setPagePreference('transfers', transfers);
             }
-
+    
+            if (!this.state.awaitingTransfer) {
+                StorageController.setPagePreference('transfers', {});
+            }
+    
+            await this.getTokens();
+    
             this.setState({
-                redeemable: redeemable,
+                showOverlay: false,
+                success: true,
+            });
+        } catch (error) {
+            console.error('Error in transferTokens:', error);
+            this.setState({
+                showOverlay: false,
+                success: false,
             });
         }
-
-        let finalTokens = [...this.state.tokens].map(
-            (token) =>
-                Object.values(changedTokens).filter(
-                    (thatToken) => token.tokenId === thatToken.tokenId
-                )[0] || token
-        );
-        StorageController.setPagePreference('redeemable', redeemable);
-        this.setState({
-            tokens: finalTokens,
-            redeemable: redeemable,
-            loading: false,
-        });
-
-        await this.checkRedeemable();
     }
+    
 
-    linkTokenToPhrases(
-        unlinkedPhrases = {},
-        tokens = {},
-        useKeysOfPhrases = false
-    ) {
+    async makeRedeemable(tokens = {}) {
+        try {
+            this.setState({
+                loading: true,
+            });
+    
+            let keys = Object.keys(tokens);
+            let bytes = {};
+            let changedTokens = {};
+    
+            for (let i = 0; i < keys.length; i++) {
+                let value = tokens[keys[i]];
+    
+                if (
+                    value.notRedeemable === false ||
+                    this.state.redeemable[value.tokenId]
+                )
+                    continue;
+    
+                let phrase = value.phrase || this.state.phrases[value.tokenId];
+    
+                if (phrase === undefined)
+                    throw new Error('bad phrase for: ' + value.tokenId);
+    
+                let encoded = Controller.web3.utils.encodePacked({
+                    value: `${value.tokenId}|${phrase.length}|${this.state.phraseId}`,
+                    type: 'string',
+                });
+    
+                bytes[value.tokenId] = encoded;
+                changedTokens[value.tokenId] = value;
+            }
+    
+            let redeemable = { ...this.state.redeemable };
+    
+            let batches = {};
+            let entries = Object.entries(bytes);
+            let count = 0;
+            let batch = 0;
+            for (let [key, value] of entries) {
+                if (count > 16) {
+                    batch++;
+                    count = 0;
+                }
+    
+                if (batches[batch] === undefined) batches[batch] = {};
+    
+                batches[batch][key] = value;
+                count++;
+            }
+    
+            for (let [_, bytesValue] of Object.entries(batches)) {
+                let values = Object.values(bytesValue);
+                let keys = Object.keys(bytesValue);
+    
+                try {
+                    await Controller.sendMethod(
+                        Controller.accounts[0],
+                        'Mod_Redemption',
+                        'addRedemptions',
+                        [keys, values]
+                    );
+    
+                    keys.forEach((key) => {
+                        redeemable[key] = values[keys.indexOf(key)];
+                        changedTokens[key].notRedeemable = false;
+                    });
+    
+                    StorageController.setPagePreference('redeemable', redeemable);
+                } catch (error) {
+                    Controller.log(error);
+                }
+    
+                this.setState({
+                    redeemable: redeemable,
+                });
+            }
+    
+            let finalTokens = this.state.tokens.map(
+                (token) => changedTokens[token.tokenId] || token
+            );
+    
+            StorageController.setPagePreference('redeemable', redeemable);
+            this.setState({
+                tokens: finalTokens,
+                redeemable: redeemable,
+                loading: false,
+            });
+    
+            await this.checkRedeemable();
+        } catch (error) {
+            console.error('Error in makeRedeemable:', error);
+            this.setState({
+                loading: false,
+            });
+        }
+    }
+    
+    linkTokenToPhrases(unlinkedPhrases = {}, tokens = {}, useKeysOfPhrases = false) {
         let orderedTokens = {};
-
+    
         Object.values(tokens).forEach((token) => {
             orderedTokens[token.tokenId] = { ...token };
         });
-
+    
         if (Object.values(orderedTokens).length === 0) return;
-
+    
         let keys = Object.keys(unlinkedPhrases);
         let actualUnlinkedPhrases = { ...this.state.unlinkedPhrases };
         let tokenKeys = Object.keys(orderedTokens);
         let currentLinkedPhrases = { ...this.state.phrases };
-
+    
         for (let i = 0; i < tokenKeys.length; i++) {
             let id = useKeysOfPhrases ? keys[i] : tokenKeys[i];
-
+    
             let phrase = unlinkedPhrases[id];
             if (currentLinkedPhrases[id] !== undefined) continue;
-
+    
             orderedTokens[id].phrase = phrase;
             orderedTokens[id].noPhrase = false;
             currentLinkedPhrases[id] = {
@@ -453,26 +516,23 @@ class RedemptionControls extends Component {
                 phraseId: this.state.phraseId,
                 phrase: phrase,
             };
-            delete actualUnlinkedPhrases[i];
+            delete actualUnlinkedPhrases[id];
         }
-
+    
         actualUnlinkedPhrases = Object.values(actualUnlinkedPhrases).filter(
-            (value) => value !== null
+            (value) => value !== undefined
         );
-
+    
         StorageController.setPagePreference('phrases', currentLinkedPhrases);
         StorageController.setPagePreference(
             'unlinkedPhrases',
             actualUnlinkedPhrases
         );
-
-        let finalTokens = [...this.state.tokens].map(
-            (token) =>
-                Object.values(orderedTokens).filter(
-                    (thatToken) => token.tokenId === thatToken.tokenId
-                )[0] || token
+    
+        let finalTokens = this.state.tokens.map(
+            (token) => orderedTokens[token.tokenId] || token
         );
-
+    
         this.setState({
             phrases: currentLinkedPhrases,
             unlinkedPhrases: actualUnlinkedPhrases,
@@ -481,21 +541,30 @@ class RedemptionControls extends Component {
     }
 
     cleanupError(seconds = 5) {
-        clearTimeout(_errorTimeout);
-        return new Promise((resolve, reject) => {
-            _errorTimeout = setTimeout(() => {
-                this.setState({
-                    error: undefined,
-                });
-            }, seconds * 1000);
-        });
+        try {
+            clearTimeout(_errorTimeout);
+            return new Promise((resolve) => {
+                _errorTimeout = setTimeout(() => {
+                    this.setState({
+                        error: undefined,
+                    });
+                    resolve();
+                }, seconds * 1000);
+            });
+        } catch (error) {
+            console.error('Error in cleanupError:', error);
+        }
     }
 
     setError(error) {
-        this.setState({
-            error: error.message || error.error || error,
-        });
-        this.cleanupError(5);
+        try {
+            this.setState({
+                error: error.message || error.error || error,
+            });
+            this.cleanupError(5);
+        } catch (error) {
+            console.error('Error in setError:', error);
+        }
     }
 
     render() {
@@ -571,7 +640,7 @@ class RedemptionControls extends Component {
                             if (index === 8)
                                 return (
                                     <ListGroup.Item
-                                        key={index}
+                                        key={index + transfer.token.tokenId}
                                         className="text-center"
                                     >
                                         {Object.values(this.state.transfers)
@@ -581,7 +650,7 @@ class RedemptionControls extends Component {
                                 );
 
                             return (
-                                <ListGroup.Item key={index}>
+                                <ListGroup.Item key={index + transfer.token.tokenId}>
                                     <span className="badge bg-light">
                                         #{transfer.token.tokenId}
                                     </span>{' '}
@@ -1459,6 +1528,7 @@ class RedemptionControls extends Component {
                                                                                                 ] ===
                                                                                                 undefined ? (
                                                                                                     <div className="d-grid gap-1 mt-2">
+                                                                                                        
                                                                                                         {/**
                                                                                     <Button variant="danger" hidden={!token?.noPhrase || this.state.unlinkedPhrases.length === 0 || token.notRedeemable === false} onClick={() => {
                                                                                         this.linkTokenToPhrases({ 0: this.state.unlinkedPhrases[0] }, { [token.tokenId]: token })
@@ -1471,41 +1541,43 @@ class RedemptionControls extends Component {
                                                                                                                 .tokenId
                                                                                                         ] !==
                                                                                                         undefined ? (
-                                                                                                            <Button
-                                                                                                                variant="warning"
-                                                                                                                onClick={() => {
-                                                                                                                    this.setState(
-                                                                                                                        {
-                                                                                                                            selectedRequest:
+                                                                                                            <><Button
+                                                                                                                        variant="danger"
+                                                                                                                        onClick={() => {
+
+                                                                                                                            this.rejectRequest(token.tokenId);
+                                                                                                                        } }>
+                                                                                                                        Reject Redemption
+                                                                                                                    </Button><Button
+                                                                                                                        variant="warning"
+                                                                                                                        onClick={() => {
+                                                                                                                            this.setState(
+                                                                                                                                {
+                                                                                                                                    selectedRequest: this
+                                                                                                                                        .state
+                                                                                                                                        .requests[token
+                                                                                                                                            .tokenId],
+                                                                                                                                    selectedToken: token,
+                                                                                                                                    actualPhrase: token.phrase,
+                                                                                                                                    showValidateRequestModal: true,
+                                                                                                                                }
+                                                                                                                            );
+                                                                                                                        } }
+                                                                                                                    >
+                                                                                                                            Validate
+                                                                                                                            Redemption
+                                                                                                                            {' '}
+                                                                                                                            {cutLongString(
                                                                                                                                 this
                                                                                                                                     .state
-                                                                                                                                    .requests[
-                                                                                                                                    token
-                                                                                                                                        .tokenId
-                                                                                                                                ],
-                                                                                                                            selectedToken:
-                                                                                                                                token,
-                                                                                                                            actualPhrase:
-                                                                                                                                token.phrase,
-                                                                                                                            showValidateRequestModal: true,
-                                                                                                                        }
-                                                                                                                    );
-                                                                                                                }}
-                                                                                                            >
-                                                                                                                Validate
-                                                                                                                Request
-                                                                                                                From{' '}
-                                                                                                                {cutLongString(
-                                                                                                                    this
-                                                                                                                        .state
-                                                                                                                        .requests[
-                                                                                                                        token
-                                                                                                                            .tokenId
-                                                                                                                    ]
-                                                                                                                        ?.sender,
-                                                                                                                    16
-                                                                                                                )}
-                                                                                                            </Button>
+                                                                                                                                    .requests[token
+                                                                                                                                        .tokenId]
+                                                                                                                                    ?.sender,
+                                                                                                                                16
+                                                                                                                            )}
+                                                                                                                        </Button></>
+                                                                                                           
+                                                                                                            
                                                                                                         ) : (
                                                                                                             <>
 

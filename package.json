@@ -1,6 +1,6 @@
 {
-    "name": "infinitymint-bt",
-    "version": "0.69.1-bt+000",
+    "name": "@0x0zAgency/infinitymint-bt",
+    "version": "0.69.2-bt+000",
     "description": "InfinityMint is your key to Web3 and Tokenized Commerce, Phygital Goods, and IP Dashboard",
     "license": "MIT",
     "funding": {
