@@ -1,7 +1,7 @@
 # InfinityMint Build Tools by 0x0zAgency
 
 Current Version: Schrödinger's Edition (🐈,🐈‍⬛)
-## 🧱 - [See how ♾️Mint created a Phygital Storefront for Chicago's premier click and mortar gallery and Metaverse Portal, <imnotArt>](https://imnot.art)
+## 🧱 - [See how ♾️Mint created a Phygital Storefront for Chicago's premier click and mortar gallery and Metaverse Portal, imnotArt @ 1010 N Ashland Ave.](https://imnot.art)
 
 # InfinityMint QuickStart Guide
 
