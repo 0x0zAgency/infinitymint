@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: "18.5.0"
           registry-url: 'https://npm.pkg.github.com'
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ITS_PAT }}" > ~/.npmrc
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ITS_SUPERPATPAT }}" > ~/.npmrc
       - run: npm publish
 
   publish-npm:
