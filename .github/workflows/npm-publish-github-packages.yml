@@ -27,5 +27,5 @@ jobs:
           node-version: "18.5.0"
           registry-url: 'https://npm.pkg.github.com'
           scope: '@0x0zagency'
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ITS_SUPERPAT }}" > ~/.npmrc
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ITS_PAT }}" > ~/.npmrc
       - run: npm publish
