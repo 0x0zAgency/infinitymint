@@ -1,5 +1,8 @@
 #Infinity Mint
 
+deployments/*
+/deployments
+
 temp_uri
 .temp_uri
 .token_prices
