@@ -26892,7 +26892,7 @@
                 "http-browserify": "^1.7.0",
                 "https-browserify": "^1.0.0",
                 "identity-obj-proxy": "^3.0.0",
-                "infinitymint": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+                "infinitymint": "file:../0x0z/infinitymint-1.21.0.69.tgz",
                 "jest": "^27.4.3",
                 "jest-resolve": "^27.4.2",
                 "jest-watch-typeahead": "^1.0.0",
