@@ -5,7 +5,7 @@ Current Version: Schrödinger's Edition (🐈,🐈‍⬛)
 
 # InfinityMint QuickStart Guide
 
-Say hello to Tokenized Commerce. Be your own marketplace! Sell your own tickets. Supercharge your Merch with the power of Phygital. Welcome to InfintyMint. A Web3 EVM Based Multi-chain Dynamic NFT Platform. A Minter that Mints minters which integrate with our EADS.eth supply-side advertising and sponsorship platform, and allows creators to mint an ∞ of NFT projects from PFP/Metaverse Portal Projects, to 1:1 NFTs, to Music NFTs.
+Say hello to Tokenized Commerce. Be your own marketplace! Sell your own tickets. Supercharge your Merch with the power of Phygital. Welcome to InfinityMint. A Web3 EVM Based Multi-chain Dynamic NFT Platform. A Minter that Mints minters which integrate with our EADS.eth supply-side advertising and sponsorship platform, and allows creators to mint an ∞ of NFT projects from PFP/Metaverse Portal Projects, to 1:1 NFTs, to Music NFTs.
 
 ## 🟨 - [Follow The 0x🟨Road.eth 🪞](https://magicmirror.one/0x0z.eth)
 ∞Mint.eth (InfinityMint), a cutting-edge tool designed for developers, designers, and artists seeking to elevate their content through Web3 technology. As a versatile development platform, InfinityMint enables the production of highly-scalable and dynamic Web3 content. For designers, it streamlines the prototyping process for NFT collections and facilitates the creation of unique randomized art with our innovative generation engine. For artists, it empowers the development of an entire decentralized ecosystem of users who can engage with your content, granting you full control over every aspect.
@@ -70,7 +70,7 @@ This “NFT” is all about utility by creating your very own custom Dynamic NFT
 5. Run `npm run start`.
 
 ## Live Demo
-- [Live Testmet Deployment of 🥳time.eth](https://partytime.infinitymint.app/) - This demo dApp is provided as a case you can check out to understand how to work InfintyMint to your advantage. The test deployment is on Goerli🔵Base.
+- [Live Testmet Deployment of 🥳time.eth](https://partytime.infinitymint.app/) - This demo dApp is provided as a case you can check out to understand how to work InfinityMint to your advantage. The test deployment is on Goerli🔵Base.
 
 ## Resources
 - [Follow Us](https://x.com/0x0zAgency)
