@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
 
 jobs:
-  
+
   build:
     runs-on: self-hosted
     steps:
@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.5.0"
+      - run: npm cache clean --force
       - run: npm ci 
 
   publish-gpr:
@@ -25,9 +26,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.5.0"
-          registry-url: 'https://npm.pkg.github.com'
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ITS_PAT }}" > ~/.npmrc
+          registry-url: https://npm.pkg.github.com/
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   publish-npm:
     needs: build
