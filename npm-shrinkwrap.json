@@ -1,12 +1,12 @@
 {
     "name": "@0x0zagency/infinitymint-bt",
-    "version": "0.69.2-bt+000",
+    "version": "0.69.3-bt+000",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
-            "name": "infinitymint-bt",
-            "version": "0.69.2-bt+000",
+            "name": "@0x0zagency/infinitymint-bt",
+            "version": "0.69.3-bt+000",
             "license": "MIT",
             "dependencies": {
                 "@nomiclabs/hardhat-ethers": "2.0.0",
@@ -24970,7 +24970,6 @@
             "version": "1.1.9",
             "resolved": "https://registry.npmjs.org/@trufflesuite/bigint-buffer/-/bigint-buffer-1.1.9.tgz",
             "integrity": "sha512-bdM5cEGCOhDSwminryHJbRmXc1x7dPKg6Pqns3qyTwFlxsqUgxE29lsERS3PlIW1HTjoIGMUqsk1zQQwST1Yxw==",
-            "hasInstallScript": true,
             "dependencies": {
                 "node-gyp-build": "4.3.0"
             }
@@ -25003,7 +25002,6 @@
             "version": "4.0.5",
             "resolved": "https://registry.npmjs.org/bufferutil/-/bufferutil-4.0.5.tgz",
             "integrity": "sha512-HTm14iMQKK2FjFLRTM5lAVcyaUzOnqbPtesFIvREgXpJHdQm8bWS+GkQgIkfaBYRHuCnea7w8UVNfwiAQhlr9A==",
-            "hasInstallScript": true,
             "optional": true,
             "dependencies": {
                 "node-gyp-build": "^4.3.0"
@@ -25074,7 +25072,6 @@
             "version": "3.0.1",
             "resolved": "https://registry.npmjs.org/keccak/-/keccak-3.0.1.tgz",
             "integrity": "sha512-epq90L9jlFWCW7+pQa6JOnKn2Xgl2mtI664seYR6MHskvI9agt7AnDqmAlp9TqU4/caMYbA08Hi5DMZAl5zdkA==",
-            "hasInstallScript": true,
             "dependencies": {
                 "node-addon-api": "^2.0.0",
                 "node-gyp-build": "^4.2.0"
@@ -25084,7 +25081,6 @@
             "version": "6.1.0",
             "resolved": "https://registry.npmjs.org/leveldown/-/leveldown-6.1.0.tgz",
             "integrity": "sha512-8C7oJDT44JXxh04aSSsfcMI8YiaGRhOFI9/pMEL7nWJLVsWajDPTRxsSHTM2WcTVY5nXM+SuRHzPPi0GbnDX+w==",
-            "hasInstallScript": true,
             "dependencies": {
                 "abstract-leveldown": "^7.2.0",
                 "napi-macros": "~2.0.0",
@@ -25156,7 +25152,6 @@
             "version": "4.0.2",
             "resolved": "https://registry.npmjs.org/secp256k1/-/secp256k1-4.0.2.tgz",
             "integrity": "sha512-UDar4sKvWAksIlfX3xIaQReADn+WFnHvbVujpcbr+9Sf/69odMwy2MUsz5CKLQgX9nsIyrjuxL2imVyoNHa3fg==",
-            "hasInstallScript": true,
             "dependencies": {
                 "elliptic": "^6.5.2",
                 "node-addon-api": "^2.0.0",
@@ -25167,7 +25162,6 @@
             "version": "5.0.7",
             "resolved": "https://registry.npmjs.org/utf-8-validate/-/utf-8-validate-5.0.7.tgz",
             "integrity": "sha512-vLt1O5Pp+flcArHGIyKEQq883nBt8nN8tVBcoL0qUXj2XT1n7p70yGIq2VK98I5FdZ1YHc0wk/koOnHjnXWk1Q==",
-            "hasInstallScript": true,
             "optional": true,
             "dependencies": {
                 "node-gyp-build": "^4.3.0"
@@ -26273,7 +26267,8 @@
         "node_modules/heap": {
             "version": "0.2.7",
             "resolved": "https://registry.npmjs.org/heap/-/heap-0.2.7.tgz",
-            "integrity": "sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg=="
+            "integrity": "sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg==",
+            "peer": true
         },
         "node_modules/helmet": {
             "version": "6.2.0",
@@ -26801,7 +26796,7 @@
         },
         "node_modules/infinitymint": {
             "version": "1.21.0.69",
-            "resolved": "file:./0x0z/infinitymint-1.21.0.69.tgz",
+            "resolved": "file:0x0z/infinitymint-1.21.0.69.tgz",
             "integrity": "sha512-hrQw9KC+vEnVNclASFBMASczn1K4yvIRY5LuV1hPbcVrQ68KWWhgABDXQ/XSPuamzFBQ7TJeva5Z32vpTZFmag==",
             "license": "MIT",
             "dependencies": {
@@ -26852,7 +26847,7 @@
         },
         "node_modules/infinitymint-client": {
             "version": "2.5.2.69",
-            "resolved": "file:./0x0z/infinitymint-client-2.5.2.69.tgz",
+            "resolved": "file:0x0z/infinitymint-client-2.5.2.69.tgz",
             "integrity": "sha512-wD3P869bmMWN30JuOYPPHjRlBo1MjJ5OfXdsHUlpoeJ+/swp4sX0M15mATQXq6CUpklwXal0dwV1eBuKXg5yUw==",
             "license": "MIT",
             "dependencies": {
