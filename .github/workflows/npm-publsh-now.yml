@@ -40,6 +40,6 @@ jobs:
         with:
           node-version: "18.5.0"
           registry-url: https://registry.npmjs.org/
-      - run: npm publish
+      - run: npm publish --scope=@0x0zagency --auth-type=legacy --registry=https://npm.pkg.github.com 
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
