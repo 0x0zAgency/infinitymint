@@ -1,6 +1,6 @@
 {
     "name": "@0x0zagency/infinitymint-bt",
-    "version": "0.69.3-bt+000",
+    "version": "0.69.4-bt+000",
     "description": "InfinityMint is your key to Web3 and Tokenized Commerce, Phygital Goods, and IP Dashboard",
     "license": "MIT",
     "funding": {
@@ -44,6 +44,7 @@
         "build_polygon": "node scripts/initial.js network=polygon && npx hardhat deploy",
         "build_base": "node scripts/initial.js network=base && npx hardhat deploy",
         "build_basegoerli": "node scripts/initial.js network=basegoerli && npx hardhat deploy",
+        "build_basesepolia": "node scripts/initial.js network=basesepolia && npx hardhat deploy",
         "build_mumbai": "node scripts/initial.js network=mumbai && npx hardhat deploy",
         "build_eth": "node scripts/initial.js network=ethereum && npx hardhat deploy",
         "build_ethereum": "node scripts/initial.js network=ethereum && npx hardhat deploy",

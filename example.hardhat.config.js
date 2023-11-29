@@ -635,7 +635,35 @@ Controller.deployConfig = {
 			confirmations: 2,
 			gasPrice: 3 * 1e9, //3 gwei
 			gasStation:
-				"https://api-goerli.basescan.org/api?module=gastracker&action=gasoracle&apikey=4JGA6P1JEYE9SXMW8P6TZYJ7CJ6U3SYXHE",
+				"https://api.basescan.org/api?module=gastracker&action=gasoracle&apikey=4JGA6P1JEYE9SXMW8P6TZYJ7CJ6U3SYXHE",
+			showGas: true,
+			gasValue: 1e9,
+			priceStation:
+				"https://api.basescan.org/api?module=stats&action=ethprice&apikey=4JGA6P1JEYE9SXMW8P6TZYJ7CJ6U3SYXHE",
+			onGetPrice: (tokenPrice, thisObject) => {
+				if (tokenPrice.status !== "1")
+					return {
+						price: 1000,
+					};
+
+				return { ...tokenPrice.result, usd: tokenPrice.result.ethusd };
+			},
+			onGetGas: (gasPrices, thisObject) => {
+				if (gasPrices.status !== "1")
+					return 6 * (thisObject.gasValue || 1e9);
+				return (
+					parseInt(gasPrices.result.SafeGasPrice) *
+					(thisObject.gasValue || 1e9)
+				);
+			},
+		},
+		basesepolia: {
+			timeout: 1000 * 60 * 10,
+			useGasStation: true, //set to true to test with eth prices
+			confirmations: 2,
+			gasPrice: 3 * 1e9, //3 gwei
+			gasStation:
+				"https://api.basescan.org/api?module=gastracker&action=gasoracle&apikey=4JGA6P1JEYE9SXMW8P6TZYJ7CJ6U3SYXHE",
 			showGas: true,
 			gasValue: 1e9,
 			priceStation:
@@ -800,6 +828,15 @@ let networks = {
 	},
 	basegoerli: {
 		url: process.env.BASEGOERLI_RPC_URL,
+		accounts: {
+			mnemonic:
+				process.env.BASE_MNEMONIC || process.env.WALLET_MNEMONIC,
+		},
+		...Controller.deployConfig.networks.base,
+		saveDeployments: true,
+	},
+	basesepolia: {
+		url: process.env.BASESEPOLIA_RPC_URL,
 		accounts: {
 			mnemonic:
 				process.env.BASE_MNEMONIC || process.env.WALLET_MNEMONIC,

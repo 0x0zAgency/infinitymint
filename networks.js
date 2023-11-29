@@ -11,6 +11,7 @@ const networks = {
     11155111: 'sepolia',
     8453: 'base',
     84531: 'basegoerli',
+    84532: 'basesepolia',
 };
 
 module.exports = networks;
