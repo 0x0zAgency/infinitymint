@@ -1,0 +1,17 @@
+{
+    "name": "🥳Time.eth - Party Pass",
+    "description": "The 🥳Time.eth Party Pass grants you access to the 🥳Time Tokenized Party Management Platform",
+    "image": "https://ipfs.io/ipfs/bafybeigafv5wfzzugyo7awbtgrfder2ixkmpn4qjaryo3ikstpcao6buie/partytime_header.png",
+    "external_url": "https://partytime.infinitymint.app",
+    "attributes": [],
+    "background_color": "FFFFFF",
+    "animation_url": "",
+    "youtube_url": "",
+    "collection_name": "Passes.🥳Time.eth",
+    "collection_description": "",
+    "collection_image": "https://ipfs.io/ipfs/bafybeigafv5wfzzugyo7awbtgrfder2ixkmpn4qjaryo3ikstpcao6buie/partytime_header.png",
+    "collection_external_url": "https://partytime.infinitymint.app/gallery",
+    "collection_total": 10000,
+    "collection_creator": "0x0z.eth",
+    "default": true
+}

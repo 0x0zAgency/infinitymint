@@ -1,0 +1,17 @@
+{
+    "name": "HouseHemp - LivingNFT",
+    "description": "This LivingNFT is the token for your HouseHemp plant. You can keep your growlog and associated photos to this token.",
+    "image": "https://bafkreid2yvpvsqfts375ncunm7wisdcnvbvxgd5romkrnk4y4jkfsayxky.ipfs.w3s.link/",
+    "external_url": "https://househemp.shop/livingNFT",
+    "attributes": ["Plant Name","Cultivar","Phenotype","Grower","Germination Date"],
+    "background_color": "FFFFFF",
+    "animation_url": "",
+    "youtube_url": "",
+    "collection_name": "HouseHemp LivingNFT v1",
+    "collection_description": "",
+    "collection_image": "https://ipfs.io/ipfs/bafybeigafv5wfzzugyo7awbtgrfder2ixkmpn4qjaryo3ikstpcao6buie/partytime_header.png",
+    "collection_external_url": "https://househemp.infinitymint.app/gallery",
+    "collection_total": 42069,
+    "collection_creator": "0x0z.eth",
+    "default": true
+}
