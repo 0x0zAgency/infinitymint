@@ -1,9 +1,9 @@
 # InfinityMint Build Tools by 0x0zAgency
 
 Current Version: Schrödinger's Edition (🐈,🐈‍⬛)
-## 🧱 - [See how ♾️Mint created a Phygital Storefront for Chicago's premier click and mortar gallery and Metaverse Portal, imnotArt @ 1010 N Ashland Ave.](https://imnot.art)
+## 🧱 - [ARCHIVED MARCH 2024: See how ♾️Mint created a Phygital Storefront for Chicago's premier click and mortar gallery and Metaverse Portal, imnotArt @ 1010 N Ashland Ave.](ipns://k51qzi5uqu5dhr1gwa9pdr4c9q03evby0l1vbvkzratrt2yhw15gaezdlwb1s6/)
 
-## 🟨 - [Follow The 0x🟨Road.eth 🪞](https://magicmirror.one/0x0z.eth)
+## 🟨 - [Follow The 0x🟨Road.eth 🪞](https:///0x0z.eth)
 Say hello to Tokenized Commerce. Be your own marketplace! Sell your own tickets. Supercharge your Merch with the power of Phygital. Welcome to InfinityMint. A Web3 EVM Based Multi-chain Dynamic NFT Platform. A Minter that Mints minters which integrate with our EADS.eth supply-side advertising and sponsorship platform, and allows creators to mint an ∞ of NFT projects from PFP/Metaverse Portal Projects, to 1:1 NFTs, to Music NFTs.
 
 ∞Mint.eth (InfinityMint), a cutting-edge tool designed for developers, designers, and artists seeking to elevate their content through Web3 technology. As a versatile development platform, InfinityMint enables the production of highly-scalable and dynamic Web3 content. For designers, it streamlines the prototyping process for NFT collections and facilitates the creation of unique randomized art with our innovative generation engine. For artists, it empowers the development of an entire decentralized ecosystem of users who can engage with your content, granting you full control over every aspect.
