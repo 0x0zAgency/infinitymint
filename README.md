@@ -1,3 +1,8 @@
+> **🟨 NEW PROTOCOL INITIATIVE — [0x🟨 Road: The Yellow Brick Road of 0x0z](docs/yellow-brick-road/README.md)**  
+> IP-first programmable smart contracts, composable album/dataset structures, budget-capped public-utility fees, and weighted governance for all users. This work is documented on the ai-ip-v0.1 development branch; the original InfinityMint platform remains below.
+
+---
+
 # InfinityMint Build Tools by 0x0zAgency
 
 Current Version: Schrödinger's Edition (🐈,🐈‍⬛)
